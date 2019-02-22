@@ -95,7 +95,7 @@ while play_again == "y":
     user_difficulty = None
 
     while user_difficulty not in ['easy', 'normal', 'hard']:
-        user_difficulty = input("Enter your difficult: Easy, Normal, or Hard. ").lower()
+        user_difficulty = input("\nEnter your difficult: Easy, Normal, or Hard. ").lower()
         if user_difficulty == 'easy':
             print("\n \n \n \n \n \n \n \n \n\n \n Beginning the game on Easy, Snowflake. \n \n \\(ᵔᵕᵔ)/ \n")
         elif user_difficulty == 'normal':
@@ -141,7 +141,7 @@ while play_again == "y":
 
 
     #Requests the number of turns the player wishes to have
-    user_guesses = input("How many turns do you wish to have?")
+    user_guesses = input("How many turns do you wish to have? \n")
 
 
     #Checks to see whether or not it is safe to convert user_guesses into an int.
@@ -159,7 +159,7 @@ while play_again == "y":
     #checks whether or not user_letter is in the mystery word.
     def mystery_word_checker(amount_of_guesses):
         if "_" not in display_word:
-            return (print("You win!"))
+            return (print("You win!\n"))
         if amount_of_guesses > 0:
             user_letter = input("Enter a single letter. \n \n").lower()
 
@@ -167,7 +167,7 @@ while play_again == "y":
             while user_letter.isalpha() != True or len(user_letter) != 1:
                 user_letter = input("You must select a single letter.\n").lower()
             if user_letter in previous_guesses:
-                print("You've already that, choose a different letter!\n")
+                print("You've already that letter, choose a different letter!\n")
                 mystery_word_checker(amount_of_guesses)
             else:    
                 previous_guesses.append(user_letter)
@@ -201,7 +201,7 @@ while play_again == "y":
 
 
 else: 
-    print("See you, space cowboy.")
+    print("See you, space cowboy.\n")
 
 
 #######   Play_again does not work properly.
